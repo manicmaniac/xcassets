@@ -1,8 +1,6 @@
 # XCAssets
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/xcassets`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A ruby library to manipulate Xcode asset catalogue.
 
 ## Installation
 
@@ -29,8 +27,8 @@ include XCAssets::DSL
 
 assets = xcassets 'Assets' do
   iconset 'LaunchImage' do
-    image fixture('40x40.png') => 'Default.png'
-    image fixture('40x40.png')
+    image '40x40.png' => 'Icon-40.png'
+    image '80x80.png' => 'Icon-40@2x.png'
   end
 end
 
@@ -45,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/xcassets.
+Bug reports and pull requests are welcome on GitHub at https://github.com/manicmaniac/xcassets.
 
 
 ## License
