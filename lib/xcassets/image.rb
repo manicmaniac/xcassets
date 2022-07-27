@@ -2,7 +2,7 @@ require 'fileutils'
 require 'fastimage'
 
 module XCAssets
-  class Image
+  class Image # :nodoc:
     attr_reader :source, :filename, :size, :idiom, :scale
 
     def initialize(source, filename: nil, size: nil, idiom: nil, scale: nil)
