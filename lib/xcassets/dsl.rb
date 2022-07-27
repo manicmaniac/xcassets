@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'xcassets'
 
 module XCAssets
@@ -10,7 +12,7 @@ module XCAssets
 
     def iconset(name, **options, &block)
       @iconset = ::XCAssets::Iconset.new(name, **options)
-      @assets.add(@iconset) if @assets
+      @assets&.add(@iconset)
       instance_eval(&block)
       @iconset
     end
