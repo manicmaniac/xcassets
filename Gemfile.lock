@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    xcassets (0.1.0)
+    xcassets (0.2.0)
       fastimage
 
 GEM
