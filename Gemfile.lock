@@ -2,15 +2,13 @@ PATH
   remote: .
   specs:
     xcassets (0.1.0)
-      fastimage (~> 1.8.1)
+      fastimage
 
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.4.0)
     ast (2.3.0)
-    fastimage (1.8.1)
-      addressable (~> 2.3, >= 2.3.5)
+    fastimage (2.2.6)
     minitest (5.9.1)
     parser (2.3.1.4)
       ast (~> 2.2)
@@ -30,11 +28,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.13)
-  minitest (~> 5.0)
-  rake (~> 10.0)
+  bundler
+  minitest
+  rake
   rubocop
   xcassets!
 
 BUNDLED WITH
-   1.13.2
+   1.17.2
