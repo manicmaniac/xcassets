@@ -30,11 +30,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.13)
-  minitest (~> 5.0)
-  rake (~> 10.0)
+  bundler
+  minitest
+  rake
   rubocop
   xcassets!
 
 BUNDLED WITH
-   1.13.2
+   1.17.2
