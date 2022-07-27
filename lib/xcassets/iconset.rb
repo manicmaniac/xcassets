@@ -1,7 +1,7 @@
 require 'json'
 
 module XCAssets
-  class Iconset
+  class Iconset # :nodoc:
     attr_reader :name, :author, :version, :images
 
     def initialize(name, author: 'xcassets', version: 1)

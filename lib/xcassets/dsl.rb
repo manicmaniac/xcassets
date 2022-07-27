@@ -1,7 +1,7 @@
 require 'xcassets'
 
 module XCAssets
-  module DSL
+  module DSL # :nodoc:
     def xcassets(name, **options, &block)
       @assets = ::XCAssets::XCAssets.new(name, **options)
       instance_eval(&block)
