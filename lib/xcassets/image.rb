@@ -6,9 +6,8 @@ module XCAssets
     attr_reader :source, :filename, :size, :idiom, :scale
 
     def initialize(source, filename: nil, size: nil, idiom: nil, scale: nil)
-      unless File.readable?(source)
-        raise IOError, "#{File.absolute_path(source)} is not readable."
-      end
+      raise IOError, "#{File.absolute_path(source)} is not readable." unless File.readable?(source)
+
       @source = source
       @filename = filename || File.basename(source)
       @size = size || FastImage.size(source).join('x')
@@ -35,7 +34,8 @@ module XCAssets
     def guess_idiom
       if @filename.include?('~iphone') then :iphone
       elsif @filename.include?('~ipad') then :ipad
-      else :universal
+      else
+        :universal
       end
     end
 
@@ -43,7 +43,8 @@ module XCAssets
       basename = File.basename(@filename, '.*')
       if basename.end_with?('@2x') then 2
       elsif basename.end_with?('@3x') then 3
-      else 1
+      else
+        1
       end
     end
   end
